@@ -1,0 +1,67 @@
+.logo{
+    display: block;
+    text-align: center;
+    
+}
+.coupang{
+    margin-top: 40px;
+    width: 210px;
+    height: 50px;
+}
+.position{
+    display: block;
+    text-align: center;
+}
+
+.save3{
+    width: 400px;
+    height: 40px;
+}
+.save4{
+    margin-top: 10px;
+    width: 400px;
+    height: 40px;
+}
+.logo1{
+    width: 20px;
+    height: 20px;
+}
+.logo2{
+    width: 20px;
+    height: 20px;
+}
+.position1{
+    display: block;
+    text-align: center;
+}
+p {
+    color: blue;
+    
+}
+
+.list {
+    justify-content: center;
+    list-style: none;
+    display: flex;
+}
+
+.keep {
+    margin-top: 15px;
+    padding-right: 50px;
+}
+.button{
+    width: 400px;
+    height: 40px;
+    background-color: rgb(33, 103, 222);
+    border: 0;
+    outline: 1;
+    
+}
+.button2{
+    width: 400px;
+    height: 40px;
+    
+    border: 0;
+    outline: 1;
+    
+}

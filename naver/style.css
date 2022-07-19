@@ -1,0 +1,104 @@
+img {
+    height: 100px;
+}
+
+div {
+    text-align: center;
+}
+
+a {
+    font-size: 20px;
+}
+
+.save1 {
+    margin-top: 50px;
+    width: 330PX;
+    height: 30px;
+}
+
+.save2 {
+
+    width: 330px;
+    height: 30px;
+}
+
+.list {
+    padding-right: 25px;
+    padding-left: 0;
+    justify-content: space-around;
+    display: flex;
+    list-style: none;
+}
+
+.login-box {
+    margin-left: 500px;
+    width: 500px;
+    height: 250px;
+    border: 1px solid black;
+}
+
+.wrapper {
+    position: relative;
+}
+
+#switch {
+    position: absolute;
+    /* hidden */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.switch_label {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    width: 58px;
+    height: 28px;
+    background: #fff;
+    border: 2px solid rgb(102, 255, 0);
+    border-radius: 20px;
+    transition: 0.2s;
+}
+
+.switch_label:hover {
+    background: #9a9696;
+}
+
+.onf_btn {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    border-radius: 20px;
+    background: rgb(18, 13, 13);
+    transition: 0.2s;
+}
+
+#switch:checked+.switch_label {
+    background: rgb(34, 183, 14);
+    border: 2px solid rgb(76, 207, 28);
+}
+
+#switch:checked+.switch_label:hover {
+    background: rgb(66, 210, 13);
+}
+
+/* move */
+#switch:checked+.switch_label .onf_btn {
+    left: 33px;
+    background: rgb(115, 109, 109);
+    box-shadow: 1px 2px 3px #00000020;
+}
+.security{
+    display: flex;
+}
+.button{
+    width: 350px;
+    height: 40px;
+    background-color: rgb(52, 184, 52);
+    border: 0;
+    outline: 1;
+}
