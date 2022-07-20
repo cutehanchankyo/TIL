@@ -1,0 +1,74 @@
+img {
+  width: 200PX;
+  height: 100px;
+}
+
+
+div {
+  text-align: center;
+}
+
+.save1 {
+ 
+  margin-top: 20px;
+  width: 250PX;
+  height: 30px;
+  margin-left: 20px;
+}
+
+.save2 {
+  margin-top: 10px;
+  margin-left: 20px;
+  width: 250px;
+  height: 30px;
+}
+
+
+
+.login-box {
+  margin-top: 50px;
+  display: block;
+  justify-content: center;
+  width: 300px;
+  height: 450px;
+  border: 1px solid black;
+  text-align: center;
+  display : block;
+  margin : auto;
+  margin-bottom: 40px;
+}
+.keep{
+  margin-top: 15px;
+  padding-right: 50px;
+  text-align: center;
+}
+.button{
+  margin-top: 10px;
+  margin-left: 20px;
+  width: 260px;
+  height: 30px;
+  background-color: rgb(107, 210, 238);
+  border: 0;
+  outline: 1;
+}
+p{
+  margin-left: 50px;
+}
+.pw{
+  
+  text-align: center;
+}
+.login-box2 {
+  margin-top: 60px;
+  display: block;
+  justify-content: center;
+  width: 300px;
+  height: 50px;
+  border: 1px solid black;
+  text-align: center;
+  display : block;
+  margin : auto;
+}
+.text{
+  text-align: center;
+}
