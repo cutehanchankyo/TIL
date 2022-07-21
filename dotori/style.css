@@ -1,0 +1,48 @@
+img {
+    margin-top: 130px;
+    width: 180PX;
+    height: 180px;
+  }
+  .save1 {
+   
+    margin-top: 20px;
+    width: 290PX;
+    height: 30px;
+    margin-right: 150px;
+    border: 3px solid rgb(64, 162, 232);
+    display : block;
+    margin : auto;
+  }
+  
+  .save2 {
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 290px;
+    height: 30px;
+    border: 3px solid rgb(64, 162, 232);
+    display : block;
+    margin : auto;
+  }
+  .login-box {
+    margin-top: 50px;
+    display: block;
+    justify-content: center;
+    width: 300px;
+    height: 450px;
+    
+    text-align: center;
+    display : block;
+    margin : auto;
+    margin-bottom: 40px;
+  }
+  .button{
+    margin-top: 10px; 
+    width: 300px;
+    height: 30px;
+    background-color:rgb(64, 162, 232);
+    border: 0;
+    outline: 1;
+  } 
+p{
+    color:rgb(64, 162, 232);
+}
