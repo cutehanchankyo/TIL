@@ -1,0 +1,124 @@
+img {
+  margin-top: 20px;
+  width: 130px;
+  height: 25px;
+}
+.text{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 250px;
+  font-size: 5px;
+}
+div {
+  text-align: center;
+}
+
+.save1 {
+  
+  width: 350PX;
+  height: 30px;
+}
+
+.save2 {
+  margin-top: 10px;
+  width: 350px;
+  height: 30px;
+}
+.save3 {
+  margin-top: 10px;
+  width: 350px;
+  height: 30px;
+}
+.save4 {
+  margin-top: 10px;
+  width: 350px;
+  height: 30px;
+}
+.save5 {
+  margin-top: 10px;
+  width: 350px;
+  height: 30px;
+}
+.line{
+  margin-top: 10px;
+  width: 360px;
+  margin-left: 580px;
+  display : block;
+  margin : auto;
+}
+.text1{
+  margin-top: 10px;
+  margin-right: 200px;
+  font-size: 5px;
+}
+.box{
+  margin-left: 500px;
+  width: 350px;
+  height: 200px;
+  border: 1px solid black;
+  display : block;
+  margin : auto;
+}
+p{
+  text-align: center;
+  margin-right: 220px;
+  
+}
+a{
+  text-align: center;
+  margin-left: 670px;
+  font-size: 3px;
+  display : block;
+  margin : auto;
+  
+}
+
+.a1{
+font-size: 5px;
+
+margin-right: 200px;
+}
+.a2{
+  font-size: 5px;
+  margin-right: 200px;
+}
+.a3{
+  font-size: 5px;
+  margin-right: 160px;
+}
+.a4{
+  font-size: 5px;
+  margin-right: 163px;
+}
+.a5{
+  font-size: 5px;
+  margin-right: 170px;
+}
+.a6{
+  font-size: 5px;
+  margin-right: 95px;
+}
+.a7{
+  font-size: 5px;
+  margin-right: 185px;
+}
+.a8{
+  font-size: 5px;
+  margin-right: 185px;
+}
+.a9{
+  font-size: 5px;
+  margin-right: 175px;
+}
+.a10{
+  font-size: 5px;
+  margin-right: 180px;
+}
+.button{
+  margin-top: 25px;
+  width: 350px;
+  height: 40px;
+  background-color: rgb(17, 45, 228);
+  border: 0;
+  outline: 1;
+}
