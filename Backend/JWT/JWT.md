@@ -76,6 +76,41 @@ aaaa.bbbb.cccc와 같이 세 파트로 나누어짐
             * {"token_type": "access"}
 
 
+## JWT 발행
 
+### header(JOSE 헤더)
+```java
+new Buffer('{"alg":"HS256","typ":"JWT"}').toString("base64")
+// eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+```
 
+### payload(JWT Claim Set)
+```java
+new Buffer('{"iss":"John Doe","exp":1434290400000,"username":"john","age":25,"iat":1434286842654}').toString("base64")
+//eyJpc3MiOiJKb2huIERvZSIsImV4cCI6MTQzNDI5MDQwMDAwMCwidXNlcm5hbWUiOiJqb2huIiwiYWdlIjoyNSwiaWF0IjoxNDM0Mjg2ODQyNjU0fQ==
+```
 
+### signature
+```java
+var crypto = require('crypto');
+
+var secretKey = 'secret';
+var headerAndClaimSet = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJKb2huIERvZSIsImV4cCI6MTQzNDI5MDQwMDAwMCwidXNlcm5hbWUiOiJqb2huIiwiYWdlIjoyNSwiaWF0IjoxNDM0Mjg2ODQyNjU0fQ';
+
+crypto.createHmac('sha256', secretKey).update(headerAndClaimSet).digest('base64')
+// jzvwdy5mQuzkEenNEFeRlSytvB7+X7NVAvtTDr1jP0Q=
+```
+
+## JWT특징
+- 토큰 자체가 데이터를 가지고 있음
+    + 누구나 열어볼 수 있기 떄문에 주요한 정보는 넣으면 안됨
+- 다른 토큰보다 길이가 길다
+- 토큰을 간제로 만료시킬 방법이 없다
+- 만료기간이 짧은 access 토큰과 달리 refresh 토큰은 만료기간이 매우 김
+
+## 토큰 확인 절차
+
+case1: access token과 refresh token 모두가 만료된 경우 -> 에러 발생
+case2: access token은 만료됐지만, refresh token은 유효한 경우 -> access token 재발급
+case3: access token은 유효하지만, refresh token은 만료된 경우 -> refresh token 재발급
+case4: accesss token과 refresh token 모두가 유효한 경우 -> 다음 미들웨어로
