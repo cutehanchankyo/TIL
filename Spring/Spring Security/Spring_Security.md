@@ -36,3 +36,14 @@ Gradle 방식
 implementation 'org.springframework.boot:spring-boot-starter-security'
 implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
 ```
+
+## Spring Security의 동작원리
+
+<img src="photo2.png">
+
+위의 life cycle 구조를 보면, request를 낚아채서 검증하는 부분은 두 군데 있다는 것을 알수있다.
+- Filter
+- Interceptor
+그런데 interceptor에서 request를 낚아채기에는, 문제가 하나 있다. 경우네따라서는 Web resource에 대한 접근도 제한해야할 수도 있기 떄문이다.
+따라서, 저희는 위의 논리에 따라서 Spring Security는 Filter단계에서 작동한다라고 추측할수있다.
+그런데 실제로도 Spring Security는 Fiter단계에서 동작한다. 
