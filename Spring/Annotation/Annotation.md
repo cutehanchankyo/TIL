@@ -100,11 +100,57 @@ public class UserCOntroller{
 public class UserController {
     @RequestMapping(method = RequestMethod.GET)
     @ResponseBody
-    public String getUser(@RequestParam String nickname, @RequestParam(name="old") String age {
+    public String getUser(@RequestParam String nickname, @RequestParam(name="old")) String age {
         // GET method, /user 요청을 처리
         User user = new User();
         user.setName(nickname);
         user.setAge(age);
         return user;
     }
+}
+```
+
+9. GetMapping
+>RequestMapping(Method=RequestMethod.GET)과 똑같은 역할을 하며, 아래와 같이 사용합니다.
+```java
+
+@Controller                   // 이 Class는 Controller 역할을 합니다
+@RequestMapping("/user")      // 이 Class는 /user로 들어오는 요청을 모두 처리합니다.
+public class UserController {
+    @GetMapping("/")
+    public String getUser(Model model) {
+        //  GET method, /user 요청을 처리
+    }
+    
+    ////////////////////////////////////
+    // 위와 아래 메소드는 동일하게 동작합니다. //
+    ////////////////////////////////////
+
+    @RequestMapping(method = RequestMethod.GET)
+    public String getUser(Model model) {
+        //  GET method, /user 요청을 처리
+    }
+}
+```
+
+10. @PostMapping
+> RequestMapping(Method=RequestMethod.POST)과 똑같은 역할을 하며, 아래와 같이 사용합니다.
+```java
+@Controller                   // 이 Class는 Controller 역할을 합니다
+@RequestMapping("/user")      // 이 Class는 /user로 들어오는 요청을 모두 처리합니다.
+public class UserController {
+    @RequestMapping(method = RequestMethod.POST)
+    public String addUser(Model model) {
+        //  POST method, /user 요청을 처리
+    }
+
+    ////////////////////////////////////
+    // 위와 아래 메소드는 동일하게 동작합니다. //
+    ////////////////////////////////////
+
+    @PostMapping('/')
+    public String addUser(Model model) {
+        //  POST method, /user 요청을 처리
+    }
+}
 ```
