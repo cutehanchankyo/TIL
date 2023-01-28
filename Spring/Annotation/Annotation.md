@@ -37,3 +37,74 @@ public class UserController{
 }
 ```
 
+4. @RequestHeader
+
+> Request의 header값을 가져올 수 있으며, 해당 Annotation을 쓴 메소드의 파라미터에 사용한다.
+
+5. RequestMappring
+
+>@RequestMapping(value="")와 같은 형태로 작성하며, 요청 들어온 URI의 요청과 Annotation value 값이 일치하면 해당 클래스나 메소드가 실행됩니다, Controller 객체 안의 메서드와 클래스에 적용 가능하며, 아래와 같이 사용한다.
+
+- Class 단위에 사용하면 하위 메소드에 모두 적용된다,
+- 메소드에 적용되면 해당 메소드에서 지정한 방식으로 URI를 처리한다.
+```java
+@Controller
+@RequestMapping("/user")
+public class UserController{
+    @RequestMappring(method = RequestMEthod.GET)
+    public String getUser(Model model){
+        // Get method, /user 요청을 처리
+    }
+    @RequestMappring(method = RequestMEthod.Post)
+    public String addUser(Model model){
+        //Post method, /user 요청을 처리
+    }
+    @RequestMappring(value = "/info", method = RequestMEthod.GET)
+    public String addUser(Model model){
+        //Get method,/user/info 요청을 처리
+    }
+
+
+}
+```
+
+6. @RequestParam
+
+>URL에 전달되는 파라미터를 메소드의 인자와 매칭시켜, 파라미터를 받아서 처리할 수 있는Annotation으로 아래와 같이 사용한다. Json형식의 Body를 MessageConverter를 통해 java객체로 변환시킨다.
+
+7. @RequestBody
+
+>Body에 전달되는 데이터를 메소의 인자와 매칭시켜, 데이터를 받아서 처리할 수 있는 Annotation으로 아래와 같이 사용합니다. 클라이언트가 보내는 HTTP 요청 본문(JSON 및 XML)을 java 오브젝트로 변환한다.
+
+클라이언트가 body에 json or xml과 같은 형태로 값을 전송하면, 해당 내용을 java Objec로 변환한다.
+
+```java
+@Controller
+@RequesMapping("/user")
+public class UserCOntroller{
+    @RequestMapping(method = RequestMethod.Post)
+    public String addUSer(@RequestBody User user){
+        //Post method, /user 요청을 처리
+        String sub_name = user.name;
+        String sub_old = user.old;
+    }
+}
+```
+
+8. @ResponseBody
+>@ResponseBody는 메소드에서 리턴되는 값이 View로 출력되지 않고 HTTP Response Body에 직접 쓰여 지게 됩니다. retur 시에 json, xml과 같은 데이터를 return한다.
+
+```java
+@Controller                   // 이 Class는 Controller 역할을 합니다
+@RequestMapping("/user")      // 이 Class는 /user로 들어오는 요청을 모두 처리합니다.
+public class UserController {
+    @RequestMapping(method = RequestMethod.GET)
+    @ResponseBody
+    public String getUser(@RequestParam String nickname, @RequestParam(name="old") String age {
+        // GET method, /user 요청을 처리
+        User user = new User();
+        user.setName(nickname);
+        user.setAge(age);
+        return user;
+    }
+```
