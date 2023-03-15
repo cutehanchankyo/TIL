@@ -11,3 +11,11 @@
 >고객의 요구가 있을때 언제 어디서나 고객중심에서 니즈를 해결해 주는것이다.
 > 쉽게 얘기하면 "내가 있는 곳으로 상품이나 서비스가 찾아온다." 하고 할 수 있다.
 
+클라우드 컴퓨팅 서비스의 종류로는 3가지가 있다.
+
+1. IaaS(Infrastructure as a Service)
+2. PaaS(Platform as a Service)
+3. SaaS(Software as a Serviece)
+
+<img src="photo.png">
+
