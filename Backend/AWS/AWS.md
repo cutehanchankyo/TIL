@@ -20,3 +20,4 @@
 <img src="photo.png">
 
 ### IaaS(Infraxtructure as a Service)
+- 인프라로서의 서비스를 뜻하며 기존에 물리적인 형태로 사용해왔던 스토리지, 서버등의 인프라를 가상화된 환경에서 쉽고 신속하게 할당받아 사용할 수 있는 서비스
